@@ -19,13 +19,13 @@ const Display = () => {
 
     const handleSubmit = (e) => {
 		if (e.key === "Enter" && word != "") {
-			setWord('');
-			console.log(word);
+			fetchWords()
+			setWord('')
 		}
 	}
 
 	const fetchWords = () => {
-		fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/imagine`)
+		fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${word}`)
 		.then(response => {
 			if(!response.ok) throw Error(response);
 			else return response.json()
