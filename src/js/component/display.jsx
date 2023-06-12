@@ -65,8 +65,8 @@ const Display = () => {
 									<span class="text-muted fs-6"> - {word.phonetic}</span>
 								</h3>
 							</div>
-							<div className="m-4">
-								<p className="fw-lighter">{word.meanings[1].definitions[0].definition}</p>
+							<div >
+								<p className="fw-lighter m-4">{word.meanings[1].definitions[0].definition}</p>
 							</div>
 							<a href={word.sourceUrls} class="link-info mb-3" target="_blank">More detailed information</a>
 							<a href={word.phonetics[0].audio} class="link-info" target="_blank"><i class="fas fa-volume-up"></i></a>
