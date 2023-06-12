@@ -13,10 +13,6 @@ const Display = () => {
         setWord(e.target.value);
       };
 
-	// const click = () => {
-	// 	setWord(word)
-	// }
-
     const handleSubmit = (e) => {
 		if (e.key === "Enter" && word != "") {
 			fetchWords()
@@ -31,7 +27,7 @@ const Display = () => {
 			else return response.json()
 		})
 		.then(result => {
-			console.log(result);
+
 			setWordList(result);
 		})
 		.catch(error => {
@@ -54,8 +50,6 @@ const Display = () => {
 				</div>
 				
 			</div>
-			
-            {/* <button onClick={click}>enter</button> */}
 			<div>
 				{wordList.map((word) => {
 					return (
